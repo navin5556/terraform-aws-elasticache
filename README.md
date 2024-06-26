@@ -1,6 +1,8 @@
 # terraform-aws-elasticache
 Terraform configurations for setting up AWS ElastiCache with custom subnet groups and security groups
 
+Refer this documentation link for detailed information- https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elasticache_replication_group#primary_endpoint_address
+
 
 ## Inputs
 
