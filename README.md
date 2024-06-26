@@ -4,6 +4,21 @@ Terraform configurations for setting up AWS ElastiCache with custom subnet group
 Refer this documentation link for detailed information- https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elasticache_replication_group#primary_endpoint_address
 
 
+## Module Directory Structure
+```
+terraform-aws-elasticache/
+|
+├── modules/
+│   └── redis/
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
+└── environments/
+    ├── dev/
+    │   └── main.tf
+    └── prod/
+        └── main.tf
+```
 ## Inputs
 
 | Name | Description | Type |
