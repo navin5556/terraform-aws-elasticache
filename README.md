@@ -8,6 +8,7 @@ Refer this documentation link for detailed information- https://registry.terrafo
 ```
 terraform-aws-elasticache/
 |
+|-- backend.tf
 ├── main.tf
 ├── variables.tf
 └── outputs.tf
