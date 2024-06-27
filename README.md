@@ -15,9 +15,33 @@ terraform-aws-elasticache/
 │       └── outputs.tf
 └── environments/
     ├── dev/
-    │   └── main.tf
+    │   ├── main.tf
+    │   ├── backend.tf
+    │   └── outputs.tf
+    ├── sit/
+    │   ├── main.tf
+    │   ├── backend.tf
+    │   └── outputs.tf
+    ├── uat/
+    │   ├── main.tf
+    │   ├── backend.tf
+    │   └── outputs.tf
     └── prod/
-        └── main.tf
+        ├── main.tf
+        ├── backend.tf
+        └── outputs.tf
+```
+
+## Steps:
+```
+For each environment (sit, uat, prod), navigate to the respective directory and execute the following commands:
+
+cd environments/<environment_name>
+terraform init
+terraform plan
+terraform apply
+
+Replace <environment_name> with the name of the environment (sit, uat, prod). This will initialize the Terraform working directory, create an execution plan, and apply the changes to reach the desired state of the configuration. This process will create a cluster for the specified environment. Please ensure you have the necessary permissions and configurations before running these commands.
 ```
 ## Inputs
 
