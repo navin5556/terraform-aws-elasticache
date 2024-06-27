@@ -1,5 +1,5 @@
 resource "aws_elasticache_replication_group" "redis" {
-  replication_group_id        = "redis-cluster-sit-ms"
+  replication_group_id        = "redis-cluster-sit-ms-poc"
   description                 = "This redis cluster will be used by microservices."
   engine                      = "redis"
   engine_version              = "7.1"
@@ -10,7 +10,7 @@ resource "aws_elasticache_replication_group" "redis" {
   subnet_group_name           = "redisdevfqa-subnet"     # Replace with your actual subnet group name
   security_group_ids          = ["sg-0c4569d2c1ea62eca"] # Replace with your actual security group ID
   multi_az_enabled            = true
-  preferred_cache_cluster_azs = ["${var.region}a", "${var.region}b","${var.region}c"] # Replace with your actual availability zone
+  preferred_cache_cluster_azs = ["${var.region}a", "${var.region}b", "${var.region}c"] # Replace with your actual availability zone
   maintenance_window          = "tue:20:00-tue:21:00"
   snapshot_retention_limit    = 3
   snapshot_window             = "19:00-20:00"
@@ -29,6 +29,6 @@ resource "aws_elasticache_replication_group" "redis" {
     log_type         = "engine-log"
   }
   tags = {
-    Name = "redis-cluster-sit-ms"
+    Name = "redis-cluster-sit-ms-poc"
   }
 }

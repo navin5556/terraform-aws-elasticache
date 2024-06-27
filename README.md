@@ -8,16 +8,14 @@ Refer this documentation link for detailed information- https://registry.terrafo
 ```
 terraform-aws-elasticache/
 |
-├── modules/
-│   └── redis/
-│       ├── main.tf
-│       ├── variables.tf
-│       └── outputs.tf
-└── environments/
-    ├── dev/
-    │   └── main.tf
-    └── prod/
-        └── main.tf
+├── main.tf
+├── variables.tf
+└── outputs.tf
+
+```
+##steps
+```
+run terraform init, terraform plan, terraform apply in the root directory of repo.
 ```
 ## Inputs
 
